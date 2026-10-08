@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login.dart';
+import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/myhomepage.dart';
 
+
 void main() {
-  runApp(const MyApp());
+  runApp(const myhomepage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class myhomepage extends StatelessWidget {
+  const myhomepage({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData( 
       ),
+    
+      home: const myhomepage(),
       routes: {
-        "/": (context) => const Login(),
-        "/home": (context) => const MyHomePage(),
-      },
+        "/":(context) => const Login(),
+        "/home":(context) => const myhomepage(),
+      }
     );
   }
 }
